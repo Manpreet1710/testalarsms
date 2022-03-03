@@ -35,10 +35,6 @@ var currentTime = setInterval(function () {
 }, 1000);
 
 
-/*functions to get hour, min, secs, 
-am or pm, add zero, set alarm time and sound, clear alarm
-*/
-
 function addZero(time) {
 
     return (time < 10) ? "0" + time : time;
