@@ -1,6 +1,9 @@
 
 
-var sound = new Audio("https://www.freespecialeffects.co.uk/soundfx/animals/duck1.wav");
+
+const sound = document.getElementById("audio")
+
+sound.src = "/sounds/bells.mp3"
 sound.loop = true;
 
 var h2 = document.getElementById('clock');
