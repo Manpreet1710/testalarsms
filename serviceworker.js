@@ -1,5 +1,5 @@
 const CACHE_NAME = 'v1'
-const urlsToCache = ["/clock.js", "/sounds/bells.mp3"]
+const urlsToCache = ["/", "/clock.js", "/sounds/bells.mp3"]
 
 const self = this
 
