@@ -32,7 +32,7 @@
 		// noinspection JSUnresolvedVariable
 		let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 		let xhr = new XMLHttpRequest();
-		xhr.open('GET', 'https://freesound.org/data/previews/316/316847_4939433-lq.mp3');
+		xhr.open('GET', 'https://applandingpage-dev.s3.amazonaws.com/ab553e8f-6907-404c-8624-ff51aa2209f0/dee7c1fb-12bf-4fc9-a161-21e12a0e65de/no-sound.mp3');
 		xhr.responseType = 'arraybuffer';
 		xhr.addEventListener('load', () => {
 			let playsound = (audioBuffer) => {
