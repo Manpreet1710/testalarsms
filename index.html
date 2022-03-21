@@ -32,7 +32,7 @@
 		// noinspection JSUnresolvedVariable
 		let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 		let xhr = new XMLHttpRequest();
-		xhr.open('GET', '/sounds/no-sound(1).mp3');
+		xhr.open('GET', '/sounds/no-sound.mp3');
 		xhr.responseType = 'arraybuffer';
 		xhr.addEventListener('load', () => {
 			let playsound = (audioBuffer) => {
