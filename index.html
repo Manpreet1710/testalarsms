@@ -32,7 +32,7 @@
 		// noinspection JSUnresolvedVariable
 		let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 		let xhr = new XMLHttpRequest();
-		xhr.open('GET', '/sounds/no-sound.mp3');
+		xhr.open('GET', 'https://alarmcloc.netlify.app/sounds/no-sound.mp3');
 		xhr.responseType = 'arraybuffer';
 		xhr.addEventListener('load', () => {
 			let playsound = (audioBuffer) => {
@@ -41,8 +41,6 @@
 				source.connect(audioCtx.destination);
 				source.loop = false;
 				source.start();
-
-				console.log(source)
 
 				setTimeout(function () {
 					playsound(audioBuffer);
