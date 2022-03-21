@@ -9,10 +9,6 @@
 		Your browser does not support the audio element.
 	</audio> -->
 
-	<!-- <audio controls autoplay loop hidden>
-		<source src="https://freesound.org/data/previews/316/316847_4939433-lq.mp3" type="audio/mpeg">
-	</audio> -->
-
 	<!-- <p>Click the button to find out if the audio automatically started to play as soon as it was ready.</p>
 
 	<button onclick="myFunction()">Try it</button> -->
@@ -20,6 +16,7 @@
 	<p id="demo"></p>
 
 	<!-- <script>
+		
 		function myFunction() {
 			var x = document.getElementById("myAudio").autoplay;
 			document.getElementById("demo").innerHTML = x;
@@ -35,7 +32,7 @@
 		// noinspection JSUnresolvedVariable
 		let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 		let xhr = new XMLHttpRequest();
-		xhr.open('GET', 'https://freesound.org/data/previews/316/316847_4939433-lq.mp3');
+		xhr.open('GET', '/sounds/no-sound(1).mp3');
 		xhr.responseType = 'arraybuffer';
 		xhr.addEventListener('load', () => {
 			let playsound = (audioBuffer) => {
@@ -44,6 +41,8 @@
 				source.connect(audioCtx.destination);
 				source.loop = false;
 				source.start();
+
+				console.log(source)
 
 				setTimeout(function () {
 					playsound(audioBuffer);
